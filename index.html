@@ -38,6 +38,12 @@ a{color:inherit}
 .time{font-size:20px;color:var(--gold);margin-top:12px}
 .mapbtn{display:inline-block;margin-top:18px;padding:11px 17px;background:var(--wine);color:white;text-decoration:none;font:11px Arial,sans-serif;letter-spacing:1.3px;text-transform:uppercase;transition:.2s}
 .mapbtn:hover{background:var(--deep)}
+.card.span2{grid-column:1/-1}
+.nandi-split{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:16px;border-top:1px solid #e5d7c2;padding-top:18px}
+.nandi-part{padding:4px 16px;display:flex;flex-direction:column;align-items:center;justify-content:space-between}
+.nandi-part:first-child{border-right:1px solid #e5d7c2}
+.nandi-part .detail{margin-top:0;font-weight:600;color:var(--wine);letter-spacing:.5px}
+.nandi-part .day{margin-top:8px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px;margin:0 auto}
 .gallery img{width:100%;height:390px;object-fit:cover;display:block}
 .gallery img:first-child{grid-column:1/-1;height:430px;object-position:center 45%}
@@ -49,6 +55,8 @@ a{color:inherit}
 @media(max-width:600px){
 .hero{min-height:650px;background-position:54% center}
 .events{grid-template-columns:1fr}
+.nandi-part{padding:4px 10px}
+.nandi-part .mapbtn{padding:9px 10px;font-size:10px;letter-spacing:.8px}
 .gallery{grid-template-columns:1fr}
 .gallery img,.gallery img:first-child{grid-column:auto;height:360px}
 .intro,.section{padding-left:20px;padding-right:20px}
@@ -78,18 +86,26 @@ a{color:inherit}
   <h2 class="section-title">Wedding Celebrations</h2>
   <div class="sub">A few days of joy, rituals &amp; togetherness</div>
   <div class="events">
-    <article class="card">
-      <div class="day">Thursday · 03 December 2026</div>
-      <h3>Nandi</h3>
-      <div class="detail">Groom’s Side</div>
-      <div class="time">3 December</div>
-    </article>
-    <article class="card">
-      <div class="day">Friday · 04 December 2026</div>
-      <h3>Nandi</h3>
-      <div class="detail">Bride’s Side</div>
-      <div class="time">4 December</div>
-      <a class="mapbtn" href="https://maps.app.goo.gl/XDWBwBVTKtHD7kJw5?g_st=ic" target="_blank" rel="noopener">Bride’s Residence · Location</a>
+    <article class="card span2">
+      <h3>Nandi Shastra</h3>
+      <div class="nandi-split">
+        <div class="nandi-part">
+          <div>
+            <div class="detail">Groom’s Side</div>
+            <div class="day">Thursday · 03 December 2026</div>
+            <div class="time">3 December</div>
+          </div>
+          <a class="mapbtn" href="https://maps.app.goo.gl/gmyvdd88Fo1eUxB78?g_st=ic" target="_blank" rel="noopener">Groom’s Residence · Location</a>
+        </div>
+        <div class="nandi-part">
+          <div>
+            <div class="detail">Bride’s Side</div>
+            <div class="day">Saturday · 05 December 2026</div>
+            <div class="time">5 December</div>
+          </div>
+          <a class="mapbtn" href="https://maps.app.goo.gl/XDWBwBVTKtHD7kJw5?g_st=ic" target="_blank" rel="noopener">Bride’s Residence · Location</a>
+        </div>
+      </div>
     </article>
     <article class="card">
       <div class="day">Sunday · 06 December 2026</div>
